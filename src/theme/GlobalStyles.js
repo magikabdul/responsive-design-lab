@@ -10,17 +10,13 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
   }
 
-  html, body {
-    height: 100%;
-  }
-
   body {
-    font-family: 'Lato', sans-serif;
-    font-size:14px;
-    line-height:1.5;
-    font-weight:400;
-    color:#434343;
-    background:#FFF;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #434343;
+    background: #FFF;
+    font-family: 'Montserrat', sans-serif;
   }
 
   img, picture, video, canvas, svg {
@@ -41,4 +37,4 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
-export default GlobalStyles
+export default GlobalStyles;
