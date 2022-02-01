@@ -4,6 +4,7 @@ import GlobalStylesAdvancedProject from 'theme/GlobalStylesAdvancedProject';
 import HeaderAdvanced from 'components/organisms/HeaderSection/HeaderAdvanced';
 import theme from 'theme/theme';
 import HeroSection from 'components/molecules/HeroSection/HeroSection';
+import ProjectSection from 'components/organisms/ProjectSection/ProjectSection';
 
 const Container = styled.div``;
 
@@ -13,6 +14,7 @@ const AdvancedProject = () => (
     <Container>
       <HeaderAdvanced />
       <HeroSection />
+      <ProjectSection />
     </Container>
   </ThemeProvider>
 );

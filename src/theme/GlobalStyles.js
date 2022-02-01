@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 14px;
-    line-height: 1.5;
     font-weight: 400;
     color: #434343;
     background: #FFF;
