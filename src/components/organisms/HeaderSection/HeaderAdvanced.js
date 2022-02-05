@@ -8,6 +8,11 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.062) 0 3px 5px;
+  z-index: 1000;
 `;
 
 const ButtonBurger = styled.button`
