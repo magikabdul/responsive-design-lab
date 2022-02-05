@@ -25,6 +25,7 @@ const Container = styled.div`
 
   @media only screen and (min-width: 1000px) {
     font-size: 3rem;
+    margin: 5rem 5rem 1rem;
   }
 `;
 
@@ -38,6 +39,7 @@ const Beginning = styled.div`
 const Ending = styled.span`
   color: ${({theme}) => theme.color.text.primary};
   position: relative;
+  padding: 0.4rem;
 
   &::after {
     content: '';
