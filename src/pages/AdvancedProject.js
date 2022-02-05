@@ -7,6 +7,8 @@ import HeroSection from 'components/molecules/HeroSection/HeroSection';
 import ProjectSection from 'components/organisms/ProjectSection/ProjectSection';
 import AboutMeSection from 'components/molecules/AboutMeSection/AboutMeSection';
 import TechnologiesSection from 'components/organisms/TechnologiesSection/TechnologiesSection';
+import ContactSection from 'components/organisms/ContactSection/ContactSection';
+import Footer from 'components/atoms/Footer/Footer';
 
 const Container = styled.div``;
 
@@ -19,6 +21,8 @@ const AdvancedProject = () => (
       <ProjectSection />
       <AboutMeSection />
       <TechnologiesSection />
+      <ContactSection />
+      <Footer />
     </Container>
   </ThemeProvider>
 );
