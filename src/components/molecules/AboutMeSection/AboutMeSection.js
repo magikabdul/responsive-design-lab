@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import SectionTitle from 'components/atoms/ProjectTitle/SectionTitle';
+import SectionTitle from 'components/atoms/SectionTitle/SectionTitle';
 import imgAbout from 'assets/about-hero.gif';
 
 const Container = styled.section`
