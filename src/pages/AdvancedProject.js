@@ -5,6 +5,7 @@ import HeaderAdvanced from 'components/organisms/HeaderSection/HeaderAdvanced';
 import theme from 'theme/theme';
 import HeroSection from 'components/molecules/HeroSection/HeroSection';
 import ProjectSection from 'components/organisms/ProjectSection/ProjectSection';
+import AboutMeSection from 'components/molecules/AboutMeSection/AboutMeSection';
 
 const Container = styled.div``;
 
@@ -15,6 +16,7 @@ const AdvancedProject = () => (
       <HeaderAdvanced />
       <HeroSection />
       <ProjectSection />
+      <AboutMeSection />
     </Container>
   </ThemeProvider>
 );
