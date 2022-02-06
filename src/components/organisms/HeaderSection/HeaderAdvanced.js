@@ -39,16 +39,17 @@ const ButtonBurger = styled.button`
     border-radius: 0.5rem;
     background: ${({theme, show}) => show ? 'white' : theme.gradient.main};
     transition: all 0.3s ease-in-out;
-    transform-origin: center;
+    transform-origin: right;
   }
 
   & span:first-child {
-    transform: ${({show}) => show ? 'rotate(-45deg) translateY(1rem)' : 'none'}
+    //width: 80%;
+    transform: ${({show}) => show ? 'rotate(-45deg) translateY(-0.5rem)' : 'none'}
   }
 
   & span:nth-child(2) {
-    width: 80%;
-    transform: ${({show}) => show ? 'rotate(45deg) translateY(-1rem)' : 'none'}
+    width: ${({ show }) => show && '100%'};
+    transform: ${({show}) => show ? 'rotate(45deg) translateY(0.5rem)' : 'none'}
   }
 
   & span:last-child {
