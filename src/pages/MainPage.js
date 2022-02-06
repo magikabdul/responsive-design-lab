@@ -9,12 +9,22 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
+  @media only screen and (max-width: 500px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 
   & h1 {
     margin-bottom: 50px;
     font-size: 2.5rem;
     text-transform: uppercase;
+    text-align: center;
     text-shadow: rgba(0, 0, 0, 0.16) 0 3px 6px, rgba(0, 0, 0, 0.23) 0 3px 6px;
+    
+    @media only screen and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
 
     & span {
       display: block;
@@ -37,6 +47,10 @@ const LinkButton = styled.button`
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+  
+  @media only screen and (max-width: 300px) {
+    min-width: unset;
+}
 
   &:hover {
     background-color: yellow;
