@@ -60,8 +60,8 @@ const Image = styled.img`
   }
 `;
 
-const AboutMeSection = () => (
-  <>
+const AboutMeSection = ({sectionName}) => (
+  <div name={sectionName}>
     <SectionTitle begin="Who" end="Am I?"/>
     <Container>
       <Box>
@@ -76,7 +76,7 @@ const AboutMeSection = () => (
       </Box>
       <Image src={imgAbout} alt="programmer"/>
     </Container>
-  </>
+  </div>
 );
 
 export default AboutMeSection;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -10,11 +11,11 @@ const Container = styled.div`
 
 const Item = styled.li`
   position: relative;
-  
-  background: ${({ theme, name }) => name === 'Contact' && theme.gradient.main };
-  padding: ${({ name }) => name === 'Contact' && '0.5rem 1.5rem'};
-  border-radius: ${({ name }) => name === 'Contact' && '1rem'};
-  color: ${({ name }) => name === 'Contact' && 'white'};
+
+  background: ${({theme, name}) => name === 'Contact' && theme.gradient.main};
+  padding: ${({name}) => name === 'Contact' && '0.5rem 1.5rem'};
+  border-radius: ${({name}) => name === 'Contact' && '1rem'};
+  color: ${({name}) => name === 'Contact' && 'white'};
 
   &:hover::after {
     width: 100%;
@@ -22,7 +23,7 @@ const Item = styled.li`
 
   @media only screen and (min-width: 1000px) {
     &::after {
-      display: ${({ name }) => (name === 'Contact' ? 'none' : 'block')};
+      display: ${({name}) => (name === 'Contact' ? 'none' : 'block')};
       content: '';
       width: 0;
       height: 0.2rem;
@@ -36,11 +37,13 @@ const Item = styled.li`
   }
 `;
 
-const MenuItem = ({name}) => (
+const MenuItem = ({name, scrollName, setShow}) => (
   <Container>
-    <Item data-key={name} name={name}>
-      {name}
-    </Item>
+    <Link to={scrollName} offset={-110} smooth>
+      <Item data-key={name} name={name} onClick={() => setShow(false)}>
+        {name}
+      </Item>
+    </Link>
   </Container>
 );
 

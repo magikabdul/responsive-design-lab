@@ -46,8 +46,8 @@ const Button = styled.button`
   }
 `;
 
-const ContactSection = () => (
-  <>
+const ContactSection = ({ sectionName }) => (
+  <div name={sectionName}>
     <SectionTitle begin="Send Me A" end="Message"/>
     <Container>
       <div>
@@ -60,7 +60,7 @@ const ContactSection = () => (
         <Button>submit</Button>
       </Form>
     </Container>
-  </>
+  </div>
 );
 
 export default ContactSection;

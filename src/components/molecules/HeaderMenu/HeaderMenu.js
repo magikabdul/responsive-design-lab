@@ -3,7 +3,22 @@ import styled from 'styled-components';
 import MenuItem from 'components/atoms/MenuItem/MenuItem';
 
 const menuLinks = [
-  'Home', 'Projects', 'About Me', 'Contact'
+  {
+    name: 'Home',
+    scrollName: 'home-section',
+  },
+  {
+    name: 'Projects',
+    scrollName: 'project-section',
+  },
+  {
+    name: 'About Me',
+    scrollName: 'about-me-section',
+  },
+  {
+    name: 'Contact',
+    scrollName: 'contact-section',
+  }
 ];
 
 const Container = styled.ul`
@@ -40,10 +55,10 @@ const Container = styled.ul`
   }
 `;
 
-const HeaderMenu = ({ show }) => (
+const HeaderMenu = ({ show, setShow }) => (
   <Container show={show}>
     {menuLinks.map((link) => (
-      <MenuItem key={link} name={link}/>
+      <MenuItem key={link.name} name={link.name} scrollName={link.scrollName} setShow={setShow}/>
     ))}
   </Container>
 );

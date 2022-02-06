@@ -58,7 +58,7 @@ const Container = styled.main`
 `;
 
 const ProjectSection = () => (
-  <>
+  <div name='project-section'>
     <SectionTitle begin='Proj' end='ects'/>
     <Container>
       {projects.map((project) => (
@@ -70,7 +70,7 @@ const ProjectSection = () => (
         />
       ))}
     </Container>
-  </>
+  </div>
 );
 
 export default ProjectSection;

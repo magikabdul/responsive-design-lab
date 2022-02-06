@@ -99,8 +99,8 @@ const ScrollDownCircle = styled.div`
   animation: 1s ${jumpCircle} infinite alternate-reverse;
 `;
 
-const HeroSection = () => (
-  <Container>
+const HeroSection = ({sectionName}) => (
+  <Container name={sectionName}>
     <ImageBox>
       <img src={imgHero} alt="landing hero"/>
     </ImageBox>

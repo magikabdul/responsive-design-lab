@@ -17,11 +17,11 @@ const AdvancedProject = () => (
     <GlobalStylesAdvancedProject />
     <Container>
       <HeaderAdvanced />
-      <HeroSection />
-      <ProjectSection />
-      <AboutMeSection />
+      <HeroSection sectionName='home-section'/>
+      <ProjectSection sectionName='project-section'/>
+      <AboutMeSection sectionName='about-me-section'/>
       <TechnologiesSection />
-      <ContactSection />
+      <ContactSection sectionName='contact-section'/>
       <Footer />
     </Container>
   </ThemeProvider>

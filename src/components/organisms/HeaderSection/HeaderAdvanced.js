@@ -43,7 +43,6 @@ const ButtonBurger = styled.button`
   }
 
   & span:first-child {
-    //width: 80%;
     transform: ${({show}) => show ? 'rotate(-45deg) translateY(-0.5rem)' : 'none'}
   }
 
@@ -69,7 +68,7 @@ const HeaderAdvanced = ({y}) => {
   return (
     <HeaderContainer hasShadow={hasShadow}>
       <Logo/>
-      <HeaderMenu show={show}/>
+      <HeaderMenu show={show} setShow={setShow}/>
       <ButtonBurger show={show} onClick={() => setShow(!show)}>
         <span/>
         <span/>
