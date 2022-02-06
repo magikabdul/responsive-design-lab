@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import { withScroll } from 'react-fns';
 import { ReactComponent as Logo } from 'assets/svg/logo.svg';
 import HeaderMenu from 'components/molecules/HeaderMenu/HeaderMenu';
 
@@ -11,7 +12,7 @@ const HeaderContainer = styled.header`
   position: sticky;
   top: 0;
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.062) 0 3px 5px;
+  box-shadow: ${({hasShadow}) => hasShadow && 'rgba(0, 0, 0, 0.062) 0 3px 5px'};
   z-index: 1000;
 `;
 
@@ -56,10 +57,16 @@ const ButtonBurger = styled.button`
   }
 `;
 
-const HeaderAdvanced = () => {
+const HeaderAdvanced = ({y}) => {
   const [show, setShow] = useState(false);
+  const [hasShadow, setHasShadow] = useState(false);
+
+  useEffect(() => {
+    y > 0 ? setHasShadow(true) : setHasShadow(false);
+  }, [y])
+
   return (
-    <HeaderContainer>
+    <HeaderContainer hasShadow={hasShadow}>
       <Logo/>
       <HeaderMenu show={show}/>
       <ButtonBurger show={show} onClick={() => setShow(!show)}>
@@ -71,4 +78,4 @@ const HeaderAdvanced = () => {
   );
 };
 
-export default HeaderAdvanced;
+export default withScroll(HeaderAdvanced);
